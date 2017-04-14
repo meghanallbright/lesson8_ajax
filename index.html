@@ -1,8 +1,8 @@
 <html>
 <!- - 
 Program Name:   Seminole Movie Connection
-Author: 
-Date: 
+Author: Meghan Allbright
+Date: April 14, 2017
 Filename:   index.html
 - ->
     
@@ -40,18 +40,53 @@ Filename:   index.html
             <p class="list-group-item-text lead text-primary" id="Rated"> </p>
         </a>
         <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading">Actors:</h3>
-            <p class="list-group-item-text lead text-primary" id="Actors">  </p>
+            <h3 class="list-group-item-heading">Genre:</h3>
+            <p class="list-group-item-text lead text-primary" id="Genre">  </p>
         </a>
         
         <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading">Plot:</h3>
-            <p class="list-group-item-text lead text-primary" id="Plot">  </p>
+            <h3 class="list-group-item-heading">Actors:</h3>
+            <p class="list-group-item-text lead text-primary" id="Actors">  </p>
 	    </a>
         
         <a href="#" class="list-group-item">
             <h3 class="list-group-item-heading">Release Date:</h3>
             <p class="list-group-item-text lead text-primary" id="Released">  </p>
+        </a> 
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Plot:</h3>
+            <p class="list-group-item-text lead text-primary" id="Plot">  </p>
+        </a> 
+         <div class="list-group">
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Poster:</h3>
+            <p class="list-group-item-text lead text-primary" id="Poster"> </p>
+        </a>
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Country:</h3>
+            <p class="list-group-item-text lead text-primary" id="Country"> </p>
+        </a>
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Director:</h3>
+            <p class="list-group-item-text lead text-primary" id="Director"> </p>
+        </a>
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Year:</h3>
+            <p class="list-group-item-text lead text-primary" id="Year">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Writer:</h3>
+            <p class="list-group-item-text lead text-primary" id="Writer">  </p>
+	    </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Runtime:</h3>
+            <p class="list-group-item-text lead text-primary" id="Runtime">  </p>
+        </a> 
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Awards:</h3>
+            <p class="list-group-item-text lead text-primary" id="Awards">  </p>
         </a> 
 
     </div>
@@ -68,9 +103,17 @@ Filename:   index.html
                 .done(function(json){
                      $('#Title').html(json.Title);
                      $('#Rated').html(json.Rated);
+                     $('#Genre').html(json.Genre);
                      $('#Actors').html(json.Actors);
-                     $('#Plot').html(json.Plot);
                      $('#Released').html(json.Released);
+                     $('#Plot').html(json.Plot);
+                     $('#Poster').html(json.Poster);
+                     $('#Country').html(json.Country);
+                     $('#Director').html(json.Director);
+                     $('#Year').html(json.Year);
+                     $('#Writer').html(json.Writer);
+                     $('#Runtime').html(json.Runtime);
+                     $('#Awards').html(json.Awards);
                 })
                 .fail(function() {
                       alert("Posting failed.");              
